@@ -9,10 +9,6 @@ import com.orhanobut.hawk.Hawk;
 
 public class GlobalActivtiy extends Application {
 
-    static {
-        System.loadLibrary("keys");
-    }
-
     public native String getNativeKey1();
     public native String getLoginKey();
     public native String getBaseUrlIcon();
@@ -20,8 +16,6 @@ public class GlobalActivtiy extends Application {
     public native String getBaseUrlHeader();
     public native String getBaseUrlAuth();
     public native String getBaseUpdate();
-
-    public static final String BASE_AUTH = "authorization: Basic cHVibGljOjY0MzU3NGFiNjllN2Q4OWUwYTcyZWViZmJkYWM4ZjUzYmFlNmExZDc=";
 
     public static String key1, key2, key3, key4, key5, key6, key7;
     public static  String DATA;
