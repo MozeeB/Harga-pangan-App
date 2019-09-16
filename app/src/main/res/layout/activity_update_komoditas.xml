@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.update.UpdateKomoditas">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginEnd="20dp"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="@string/update_harga_pangan"/>
+    </android.support.v7.widget.Toolbar>
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swifUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".activity.update.UpdateKomoditas">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvUpdateTgl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="21 Mei 2019"
+            android:textSize="14dp"
+            android:textAlignment="center"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"/>
+        <Spinner
+            android:id="@+id/spnUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:paddingStart="20dp"
+            android:fontFamily="@font/days_one"
+            android:background="@drawable/capsule2"
+            android:layout_marginBottom="@dimen/padding_10"
+            tools:listitem="Sleman"/>
+
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmer_container_update"
+                    android:layout_width="match_parent"
+                    android:layout_margin="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center">
+
+                        <include
+                            layout="@layout/place_holder_layout_update"/>
+                        <include
+                            layout="@layout/place_holder_layout_update"/>
+                        <include
+                            layout="@layout/place_holder_layout_update"/>
+                        <include
+                            layout="@layout/place_holder_layout_update"/>
+                        <include
+                            layout="@layout/place_holder_layout_update"/>
+                        <include
+                            layout="@layout/place_holder_layout_update"/>
+
+
+
+                    </LinearLayout>
+
+                </com.facebook.shimmer.ShimmerFrameLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_update"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+        </FrameLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>
